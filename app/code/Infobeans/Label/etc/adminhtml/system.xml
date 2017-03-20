@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="infobeans" translate="label" sortOrder="10">
+            <label>Infobeans</label>
+        </tab>
+        <section id="label_section" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Label</label>
+            <tab>infobeans</tab>
+            <resource>Infobeans_Label::hello_configuration</resource>
+            <group id="new_label" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>New Label</label>
+                <field id="status_label" translate="label" type="select" sortOrder="0" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enabled</label>
+		    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="text_label" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text</label>
+                    <comment><![CDATA[text will be on the label.]]></comment>
+                </field>
+                <field id="text_color_label" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Label text color</label>
+<!--                    <frontend_model>Infobeans\Label\Block\Color</frontend_model>-->
+                </field>
+<!--                <field id="logo" translate="label" type="image" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>New Label Image</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">logo</upload_dir>
+                    <base_url type="media" scope_info="1">logo</base_url>
+                    <comment><![CDATA[Allowed file types: jpeg, gif, png.]]></comment>
+                </field>-->
+            </group>
+            <group id="featured_label" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Featured Label</label>
+                <field id="status_label" translate="label" type="select" sortOrder="0" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enabled</label>
+		    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="text_label" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text</label>
+                    <comment><![CDATA[text will be on the label.]]></comment>
+                </field>
+                <field id="text_color_label" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Label text color</label>
+                </field>
+<!--                <field id="logo" translate="label" type="image" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>New Label Image</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">logo</upload_dir>
+                    <base_url type="media" scope_info="1">logo</base_url>
+                    <comment><![CDATA[Allowed file types: jpeg, gif, png.]]></comment>
+                </field>-->
+            </group>
+            <group id="sales_label" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Sale Label</label>
+                <field id="status_label" translate="label" type="select" sortOrder="0" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enabled</label>
+		    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="text_label" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text</label>
+                    <comment><![CDATA[text will be on the label.]]></comment>
+                </field>
+                <field id="text_color_label" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Label text color</label>
+                </field>
+<!--                <field id="logo" translate="label" type="image" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>New Label Image</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">logo</upload_dir>
+                    <base_url type="media" scope_info="1">logo</base_url>
+                    <comment><![CDATA[Allowed file types: jpeg, gif, png.]]></comment>
+                </field>-->
+            </group>
+        </section>
+    </system>
+</config>

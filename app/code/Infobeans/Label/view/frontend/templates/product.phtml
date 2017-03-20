@@ -1,0 +1,42 @@
+<?php
+
+
+if ($block->_request->getFullActionName() == 'catalog_product_view'){
+$class="product-labels" ;}
+else{
+$class="product-label" ;}
+?>
+<?php if ($block->isSale() || $block->isNew() || $block->isFeatured()): ?>
+<div class=<?php echo $class?>>
+        <ul>
+            <?php if ($block->isSale() && $block->isSaleEnabled()): ?>
+                <?php /* product on sale */ ?>
+                <?php $color= $block->getSaleColor()?>
+                <?php $saleStyle = "background:" . $color . "; color:" . "#FFFFFF" . ";" ?>
+                <li class="label" style="<?php echo $saleStyle ?>">
+                    <span><?php echo $block->getSalesText()." ".$block->getSaleText() ?></span>
+                </li>
+            <?php endif; ?>
+
+            <?php if ($block->isNew() &&  $block->isNewEnabled()): ?>
+                <?php /* new product */ ?>
+                <?php $color= $block->getNewColor()?>
+                <?php $newStyle = "background:" . $color . "; color:" . "#FFFFFF" . ";" ?>
+                <li class="label" style="<?php echo $newStyle ?>">
+                    <span><?php echo $block->getNewText() ?></span>
+                </li>
+            <?php endif; ?>
+
+            <?php if ($block->isFeatured()&& $block->isFeaturedEnabled()): ?>
+                <?php /* featured product */ ?>
+                <?php $color= $block->getFeaturedColor()?>
+                <?php $featuredStyle = "background:" . $color . "; color:" . "#FFFFFF" . ";" ?>
+                <li class="label" style="<?php echo $featuredStyle ?>">
+                    <span><?php echo $block->getFeaturedText()  ?></span>
+                </li>
+            <?php endif; ?>
+        </ul>
+    </div>
+<?php endif; ?>
+
+
